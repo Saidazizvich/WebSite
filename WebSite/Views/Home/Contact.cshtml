@@ -1,0 +1,141 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Contact</h1>
+
+<body class="loader-active">
+
+<!--== Preloader Area Start ==-->
+<div class="preloader">
+    <div class="preloader-spinner">
+        <div class="loader-content">
+            <img src="~/Content/assets/img/preloader.gif" alt="JSOFT">
+        </div>
+    </div>
+</div>
+<!--== Preloader Area End ==-->
+<!--== Header Area Start ==-->
+<header id="header-area" class="fixed-top">
+    <!--== Header Bottom Start ==-->
+    <div id="header-bottom">
+        <div class="container">
+            <div class="row">
+                <!--== Logo Start ==-->
+                <div class="col-lg-4">
+                    <a href="index.html" class="logo">
+                            <img src="~/Content/assets/img/logo.png" alt="JSOFT">
+                    </a>
+                </div>
+                <!--== Logo End ==-->
+                <!--== Main Menu Start ==-->
+                    <div class="col-lg-8 d-none d-xl-block">
+                        <nav class="mainmenu alignright">
+                            <ul>
+                                <li class="active"><a href="Home/Index/">Big Menu</a></li>
+                                <li><a href="/Home/About/">About</a></li>
+                                <li><a href="/Home/Services">Services</a></li>
+                                <li><a href="/Home/Contact">Contact</a></li>
+                                <li><a href="/Home/Gallery">Gallery</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                <!--== Main Menu End ==-->
+            </div>
+        </div>
+    </div>
+    <!--== Header Bottom End ==-->
+</header>
+<!--== Header Area End ==-->
+<!--== Page Title Area Start ==-->
+<section id="page-title-area" class="section-padding overlay">
+    <div class="container">
+        <div class="row">
+            <!-- Page Title Start -->
+            <div class="col-lg-12">
+                <div class="section-title  text-center">
+                    <h2>Contact Us</h2>
+                    <span class="title-line"><i class="fa fa-car"></i></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <!-- Page Title End -->
+        </div>
+    </div>
+</section>
+<!--== Page Title Area End ==-->
+<!--== Contact Page Area Start ==-->
+<div class="contact-page-wrao section-padding">
+    <div id="back">
+        @if (ViewBag.Sucess != null)
+            {
+                <h3 class="text-success">@ViewBag.Sucess</h3>
+            }
+            @if (ViewBag.Error != null)
+            {
+                <h3  class="text-danger">@ViewBag.Error</h3>
+            }
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 m-auto">
+                <div class="contact-form">
+                    <form action="/Home/Contact" method="post">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="name-input">
+                                    <input type="text" name="Name" required placeholder="Name">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="email-input">
+                                    <input type="text" name="SurName" required placeholder="Surname">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="website-input">
+                                    <input type="email" name="Email" required placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="subject-input">
+                                    <input type="text" name="Topics" required placeholder="Topics">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="message-input">
+                            <textarea name="Message" cols="30" rows="10" required placeholder="Message"></textarea>
+                        </div>
+
+                        <div class="input-submit">
+                            <button type="submit">Submit Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--== Contact Page Area End ==-->
+<!--== Footer Area Start ==-->
+<section id="footer-area">
+    <!-- Footer Widget Start -->
+    <div class="footer-widget-area">
+        <div class="container">
+            <div class="row">
+                <!-- Single Footer Widget Start -->
+               
+             
+            </div>
+        </div>
+    </div>
+    </section>
+</body>
